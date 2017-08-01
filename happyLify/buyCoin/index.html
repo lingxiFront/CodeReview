@@ -1,0 +1,35 @@
+<style>
+.clearfix:after { display: block; content: " "; clear: both; }
+body { background-image: url("./images/bk.jpg"); background-size: 100%; }
+.pay-title { display: block; margin: 1.76rem auto 0; width: 3.29333rem; height: 0.61333rem; }
+.goods { width: 100%; margin-top: 0.13333rem; height: 4.08rem;}
+.goods .item { float: left; width: 4.24rem; height: 1.94667rem; background-image: url("./images/good-bk.png"); background-size: 100%; }
+.goods .item:active { opacity: 0.8; }
+.goods .item.on { background-image: url("./images/good-selected.png"); }
+.goods .num { padding-top: 0.53333rem; margin-left: 0.45333rem; font-size: 0.32rem; color: #40d8d8; }
+.goods .monney { margin-top: 0.08rem; margin-left: 0.45333rem; font-size: 0.29333rem; color: #fff; }
+.goods .col1 { margin-left: 0.34667rem; }
+.goods .col2 { margin-left: 0.88rem; }
+.pay-type { width: 100%; height: 0.73333rem; }
+.zhifubao { display: block; margin: 0.21333rem auto 0; width: 4.48rem; }
+.zhifubao:active { opacity: 0.8; }
+.free-coin { display: block; margin: 0.13333rem auto 0; width: 7.06667rem; }
+.free-coin:active { opacity: 0.8; }
+.pay-tip { display: block; margin: 0.13333rem auto 0; width: 9.46667rem; }
+</style>
+<img class="pay-title" src="./images/pay-title.png">
+<div class="goods">
+</div>
+<img class="pay-type" src="./images/pay-type.png">
+<img class="zhifubao" src="./images/zhifubao.png">
+<img class="free-coin" src="./images/free-coin.png">
+<img class="pay-tip" src="./images/pay-tip.png">
+<div id="goPay" style="display:none;"></div>
+<script>
+    $(function () {
+        var script = document.createElement('script');
+        script.src="./component/buyCoin/index.js";
+        document.getElementById("container").appendChild(script);
+    });
+
+</script>

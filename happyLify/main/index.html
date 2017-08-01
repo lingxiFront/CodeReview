@@ -1,0 +1,327 @@
+<style type="text/css">
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  display: none;
+  width: 0;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 0;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+
+.home {
+  width: 10rem;
+  min-height: 26.06667rem;
+  background: url(images/home-bg.jpg) no-repeat;
+  background-size: 100%;
+  background-color: #030E20;
+  position: relative;
+  overflow: hidden;
+  font-size: 0;
+}
+.home .home-share {
+  height: 0.70667rem;
+  position: fixed;
+  top: 8.89333rem;
+  right: -0.86667rem;
+  cursor: pointer;
+  z-index: 9;
+}
+.home .miguCoin {
+  font-size: 0;
+  margin-left: 0.49333rem;
+  margin-top: 0.34667rem;
+}
+.home .miguCoin img {
+  width: 1.97333rem;
+  height: 0.34667rem;
+}
+.home .miguCoin .coin-num {
+  color: #45E8EA;
+  font-size: 0.42667rem;
+  margin-left: 0.13333rem;
+}
+.home .rule {
+  width: 2.4rem;
+  position: absolute;
+  top: 0.77333rem;
+  left: 0.36rem;
+  cursor: pointer;
+}
+.home .rule-popup {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 199;
+}
+.home .rule-popup .mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.home .rule-popup .rule-close {
+  width: 0.85333rem;
+  position: absolute;
+  top: 1.33333rem;
+  right: 1.6rem;
+  z-index: 99;
+  cursor: pointer;
+}
+.home .rule-popup .rule-content {
+  position: absolute;
+  top: 0.66667rem;
+  left: 1.04rem;
+  width: 7.93333rem;
+}
+.home .sponsor {
+  width: 1.706667rem;
+  margin-right: 0.33333rem;
+  margin-top: 0.26667rem;
+}
+.home .title {
+  text-align: center;
+  margin-top: 0.90667rem;
+}
+.home .title > img {
+  width: 7.6rem;
+}
+.home .title .select {
+  margin-top: 0.50667rem;
+  width: 5.4rem;
+  display: inline-block;
+}
+.home .getCoin {
+  width: 2.68rem;
+  cursor: pointer;
+}
+.home .exchange {
+  width: 2.68rem;
+  cursor: pointer;
+}
+.home .game {
+  text-align: center;
+  margin-top: 0.93333rem;
+}
+.home .answer {
+  width: 7.06667rem;
+  cursor: pointer;
+}
+.home .lotto {
+  width: 7.06667rem;
+  cursor: pointer;
+}
+.home .more {
+  width: 2.88rem;
+  margin-top: 0.93333rem;
+  padding: 0 20px;
+}
+.home .extend {
+  margin-top: 0.42667rem;
+  padding-left: 0.29333rem;
+  padding-right: 0.29333rem;
+}
+.home .extend_1 {
+  width: 4.56rem;
+  height: 3.09333rem;
+}
+.home .extend_2 {
+  width: 4.56rem;
+}
+.home .voice-box {
+  text-align: center;
+  margin-top: 0.42667rem;
+}
+.home .line {
+  height: 1px;
+  width: 6.26667rem;
+}
+.home .voice {
+  margin-top: 0.29333rem;
+  margin-bottom: 0.29333rem;
+  margin-left: 0.82667rem;
+}
+.home .pic {
+  width: 0.98667rem;
+}
+.home .intro {
+  width: 5.65333rem;
+  margin-left: 0.45333rem;
+  margin-right: 0.45333rem;
+}
+.home .play {
+  width: 0.74667rem;
+  margin-top: 0.24rem;
+  cursor: pointer;
+}
+.home .pause {
+  display: none;
+  width: 0.74667rem;
+  margin-top: 0.24rem;
+  cursor: pointer;
+}
+.home .no-more {
+  width: 9.08rem;
+  margin-top: 0.48rem;
+}
+
+.headset {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.headset .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.headset .main {
+  position: absolute;
+  left: 1.70667rem;
+  top: 5.33333rem;
+  width: 6.70667rem;
+  height: 4.74667rem;
+  background: url(images/headset.png) no-repeat;
+  background-size: 100%;
+}
+.headset .bg {
+  width: 6.62667rem;
+}
+.headset .btn {
+  width: 4.66667rem;
+  margin-top: 3.10667rem;
+}
+
+</style>
+<div class="wrapper home">
+  <!--规则弹窗-->
+  <div class="rule-popup">
+    <div class="mask"></div>
+    <img class="rule-close" src="images/rule-close.png"/>
+    <img class="rule-content" src="images/rule-popup.png"/>
+  </div>
+  <!--耳机弹窗-->
+  <div class="headset">
+    <div class="mask"></div>
+    <div class="main">
+      <img class="btn" src="images/haode.png"/>
+    </div>
+  </div>
+  <img class="home-share" src="images/home-share.png"/>
+  <div class="clearfix">
+    <div class="miguCoin fl">
+      <img src="images/miguCoin.png"/>
+      <span class="coin-num">0</span>
+    </div>
+    <img class="sponsor fr" src="images/sponsor.png"/>
+  </div>
+  <img class="rule fl" src="images/rule.png"/>
+  <div class="title">
+    <img src="images/title.png"/>
+    <div class="select clearfix">
+      <img class="getCoin fl" src="images/getCoin.png"/>
+      <img class="exchange fr" src="images/exchange.png"/>
+    </div>
+  </div>
+  <div class="game">
+    <img class="answer" src="images/answer.png"/>
+    <img class="lotto" src="images/lotto.png"/>
+    <img class="more" src="images/home-more.png"/>
+  </div>
+  <!--<div class="video clearfix">
+    <div class="video_1 fl">
+    	<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" style="width: 4.56rem; height: 3.09333rem;" poster="images/video_1.png" data-setup="{}">
+        <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+        <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+      </video>
+    </div>
+    <div class="video_2 fr">
+      <video id="example_video_2" class="video-js vjs-default-skin" controls preload="none" style="width: 4.56rem; height: 3.09333rem;" poster="images/video_2.png" data-setup="{}">
+        <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+        <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+        <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+        <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+      </video>
+    </div>
+  </div>-->
+  <div class="extend clearfix">
+    <img class="extend_1 fl" src="images/video_1.png"/>
+    <img class="extend_2 fr" src="images/video_2.png"/>
+  </div>
+  <div class="voice-box">
+    <audio id="myAudio" src="" type="audio/mp3">
+      Your browser does not support the audio tag.
+    </audio>
+    <img class="line" src="images/line.png"/>
+    <div class="voice clearfix">
+      <a href="http://wap.cmread.com/r/l/v.jsp?bid=660477198" class="fl">
+        <img class="pic" src="images/pic_1.png"/>
+        <img class="intro" src="images/intro_1.png"/>
+      </a>
+      <img class="play fl" data-order = "1" src="images/home-play.png"/>
+      <img class="pause fl" src="images/home-pause.png"/>
+    </div>
+    <img class="line" src="images/line.png"/>
+    <div class="voice clearfix">
+      <a href="http://wap.cmread.com/r/l/v.jsp?bid=660451066" class="fl">
+        <img class="pic fl" src="images/pic_2.png"/>
+        <img class="intro fl" src="images/intro_2.png"/>
+      </a>
+      <img class="play fl" data-order = "2" src="images/home-play.png"/>
+      <img class="pause fl" src="images/home-pause.png"/>
+    </div>
+    <img class="line" src="images/line.png"/>
+    <div class="voice clearfix">
+      <a href="http://wap.cmread.com/r/l/v.jsp?bid=660480305" class="fl">
+        <img class="pic fl" src="images/pic_3.png"/>
+        <img class="intro fl" src="images/intro_3.png"/>
+      </a>
+      <img class="play fl" data-order = "3" src="images/home-play.png"/>
+      <img class="pause fl" src="images/home-pause.png"/>
+    </div>
+    <img class="no-more" src="images/noMore.png"/>
+  </div>
+  
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var script = document.createElement('script');
+    script.src="./component/main/index.js";
+    document.getElementById("container").appendChild(script);
+    
+    var videoJs = document.createElement('script');
+    videoJs.src="./js/lib/video.min.js";
+    document.getElementById("container").appendChild(videoJs);
+});
+</script>

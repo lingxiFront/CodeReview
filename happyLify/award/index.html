@@ -1,0 +1,239 @@
+<style type="text/css">
+.award {
+  width: 10rem;
+  height: 20.72rem;
+  background: url(images/award-bg.jpg) no-repeat;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+#rotate {
+  width: 7.2rem;
+  position: absolute;
+  top: 3.74667rem;
+  left: 1.45333rem;
+}
+
+.pointer-box img {
+  width: 2rem;
+  position: absolute;
+  top: 5.65333rem;
+  left: 4.08rem;
+  cursor: pointer;
+  z-index: 9;
+}
+.pointer-gray{
+  display: none;
+  z-index: 9;
+}
+
+.share-share {
+  width: 2.57333rem;
+  position: absolute;
+  top: 11.90667rem;
+  left: 3.76rem;
+  cursor: pointer;
+}
+/*未中奖弹窗样式*/
+.no-prize {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.no-prize .mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.no-prize .main {
+  position: absolute;
+  left: 1.70667rem;
+  top: 5.33333rem;
+  width: 6.70667rem;
+  height: 4.74667rem;
+  background: url(images/no-prize.png) no-repeat;
+  background-size: 100%;
+}
+.no-prize .bg {
+  width: 6.62667rem;
+}
+.no-prize .btn {
+  width: 4.01333rem;
+  margin-top: 2.8rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
+}
+
+/*虚拟奖弹窗样式*/
+.virtual-prize {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.virtual-prize .mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.virtual-prize .main {
+  position: absolute;
+  left: 1.70667rem;
+  top: 5.33333rem;
+  width: 6.70667rem;
+  height: 4.74667rem;
+  background: url(images/virtual-prize.png) no-repeat;
+  background-size: 100%;
+}
+.virtual-prize p {
+  color: #fff;
+  font-size: 0.34667rem;
+  font-family: "microsoft yahei, helvetica, sans-serif";
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  margin-top: 1.73333rem;
+  line-height: 1.8;
+}
+.virtual-prize .bg {
+  width: 6.62667rem;
+}
+.virtual-prize .btn {
+  width: 4.01333rem;
+  margin-top: 0.26667rem;
+  margin-left: 0.2rem;
+  cursor: pointer;
+}
+
+/*实物奖弹窗样式*/
+.real-prize {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.real-prize .mask {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.real-prize .main {
+  position: absolute;
+  left: 1.66667rem;
+  top: 3.5rem;
+  width: 6.66667rem;
+  height: 8.22667rem;
+  background: url(images/real-prize.png) no-repeat;
+  background-size: 100%;
+  transition: all 0.5s;
+}
+.real-prize p {
+  color: #fff;
+  font-size: 0.34667rem;
+  font-family: "microsoft yahei, helvetica, sans-serif";
+  padding-left: 0.93333rem;
+  padding-right: 0.66667rem;
+  margin-top: 2.13333rem;
+  line-height: 1.8;
+}
+.real-prize .bg {
+  width: 6.62667rem;
+}
+.real-prize .btn1 {
+  width: 2.50667rem;
+  position: absolute;
+  bottom: 0.9rem;
+  left: 0.86667rem;
+  cursor: pointer;
+}
+.real-prize .btn2 {
+  width: 2.66667rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 0.6rem;
+  cursor: pointer;
+}
+
+.user-msg {
+  padding-left: 1.06667rem;
+  font-size: 0;
+}
+.user-msg .msg {
+  width: 3.13333rem;
+  height: 0.50667rem;
+  font-size: 0.32rem;
+  background: transparent;
+  color: #fff;
+  text-indent: 0.08rem;
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+.user-msg .name {
+  margin-top: 0.24rem;
+}
+.user-msg .tel {
+  margin-top: 0.44rem;
+}
+.user-msg .address {
+  margin-top: 0.4rem;
+}
+
+</style>
+<div class="award">
+  <img class="share-share" src="images/share-share.png"/>
+  <div class="turntable-bg"> 
+  <div class="pointer-box">
+    <img class="pointer" src="images/pointer.png" alt="pointer">
+    <img class="pointer-gray" src="images/pointer-gray.png" alt="pointer-gray">
+  </div>
+  <div class="rotate">
+    <img id="rotate" src="images/turntable.png" alt="turntable">
+  </div>
+  <!--未中奖弹窗-->
+  <div class="no-prize">
+    <div class="mask"></div>
+    <div class="main">
+      <img class="btn" src="images/again.png"/>
+    </div>
+  </div>
+  <!--虚拟奖弹窗-->
+  <div class="virtual-prize">
+    <div class="mask"></div>
+    <div class="main">
+      <p>恭喜您获得<span class="gift"></span>，奖品会在活动结束后陆续发放哦~</p>
+      <img class="btn" src="images/virtual-btn.png"/>
+    </div>
+  </div>
+  <!--实物奖弹窗-->
+  <div class="real-prize">
+    <div class="mask"></div>
+    <div class="main">
+      <p>恭喜您获得<span class="gift"></span>，火速填写收货地址吧~</p>
+      <div class="user-msg">
+        <input class="msg name" type="text"/>
+        <input class="msg tel" type="text"/>
+        <input class="msg address" type="text"/>
+      </div>
+      <img class="btn1" src="images/real-btn1.png"/>
+      <img class="btn2" src="images/real-btn2.png"/>
+    </div>
+  </div>
+</div>
+<script>
+  $(function () {
+      var script = document.createElement('script');
+      script.src="./component/award/index.js";
+      document.getElementById("container").appendChild(script);
+  });
+</script>
