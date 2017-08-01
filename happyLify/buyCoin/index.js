@@ -58,7 +58,7 @@
   /**
    * @desc 分转成元
    * @arg {number} price 分
-   * @arg {float} 元
+   * @return {number} 元
    */
   function turnToYuan(price) {
     var prices = parseInt(price);
