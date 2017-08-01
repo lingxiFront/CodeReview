@@ -1,0 +1,134 @@
+
+<style>
+    .wrapper{
+        width: 100%;
+        /*position: fixed;*/
+        background: url("./images/bk-long.jpg") no-repeat;
+        background-size: 100%;
+    }
+    .wrapper .title{
+        /*display: block;*/
+        width: 7.12333rem;
+        margin: 0.49578rem 0 0 1.48992rem;
+    }
+    .wrapper .tryPlay{
+        width: 3.51321rem;
+        margin: -0.51rem 1rem 1rem 0.88rem;
+    }
+    .wrapper .startGame{
+        width: 3.51321rem;
+        margin: -0.51rem 1rem 1rem -0.5rem;
+    }
+    .wrapper .shareArea{
+        position: absolute;
+        top: 6.3rem;
+        left: 0.3rem;
+        width: 9rem;
+        height: 2rem;
+        padding: 0.246rem 0.2rem;
+        background: url("./images/shareBtn-right.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .wrapper .shareArea .shareBtn{
+        width: 2.7rem;
+        height: 100%;
+        z-index: 2;
+    }
+    .wrapper .shareArea .count{
+        font-size: 0.35rem;
+        float: right;
+        margin: 0.3rem 0.05rem;
+        line-height: 0.5rem;
+        color: #fff;
+    }
+    .wrapper .shareArea .colorful{
+        color: #45E8EA;
+    }
+    .wrapper .rules{
+        display: block;
+        width: 8.97892rem;
+        margin: 1.3rem 0 0 0.51891rem;
+    }
+
+    .wrapper .popPrompt{
+        display: none;
+        position: fixed;
+        left: 1.5rem;
+        top: 5rem;
+        width: 7rem;
+        height: 5rem;
+        background: url("./images/migibi-little.png") no-repeat;
+        background-size: 100% 100%;
+        z-index: 11;
+    }
+    .wrapper .popPrompt .pop-left{
+        position: absolute;
+        left: 0.7rem;
+        width: 2.5rem;
+        top: 3.2rem;
+    }
+    .wrapper .popPrompt .pop-top{
+        position: absolute;
+        left: 1.8rem;
+        width: 3.5rem;
+        top: 2.2rem;
+    }
+    .wrapper .popPrompt .pop-right{
+        position: absolute;
+        right: 0.7rem;
+        width: 2.5rem;
+        top: 3.2rem;
+    }
+    .wrapper .popPrompt .pop-center{
+        position: absolute;
+        right: 1.8rem;
+        width: 3.5rem;
+        top: 3.2rem;
+    }
+    .wrapper .popPrompt .pop-close{
+        position: absolute;
+        right: -0.4rem;
+        width: 1.5rem;
+        top: -0.6rem;
+    }
+    .wrapper .pop-mask{
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+        z-index: 10;
+    }
+
+    .wrapper .tryPlay:active,.wrapper .startGame:active,.wrapper .shareBtn:active,.wrapper .pop-left:active,.wrapper .pop-right:active{
+        opacity: 0.8;
+    }
+</style>
+<div class="wrapper">
+    <img src="./images/q-title.png" class="title">
+    <img src="./images/tryPlay.png" class="tryPlay">
+    <img src="./images/startGame.png" class="startGame">
+    <div class="shareArea">
+        <img src="./images/shareBtn.png" class="shareBtn">
+        <p class="count">您今日还有 <span class="colorful">0</span>次游戏机会！<br>成功分享活动可获得一次额外游戏机会<br>每日最多可分享3次</p>
+    </div>
+    <img src="./images/rules.png" class="rules">
+
+    <div class="popPrompt">
+        <!--<img src="./images/120migubi.png" class="pop-top">-->
+        <img src="./images/pop-cancel.png" class="pop-left">
+        <img src="./images/pop-getMigubi.png" class="pop-right">
+        <!--<img src="./images/pop-ok.png" class="pop-center">-->
+        <!--<img src="./images/pop-close.png" class="pop-close">-->
+    </div>
+    <div class="pop-mask"></div>
+</div>
+<script>
+    $(function () {
+        var script = document.createElement('script');
+        script.src="./component/questionMain/index.js";
+        document.getElementById("container").appendChild(script);
+    });
+</script>

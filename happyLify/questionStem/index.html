@@ -1,0 +1,207 @@
+
+<style>
+    .wrapper{
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        font-size: 0.34rem;
+        border-top: 1px black solid;
+        color: white;
+        background: url("./images/bk.jpg") no-repeat;
+        background-size: 100% 100%;
+    }
+    .wrapper .voice-icon{
+        position: absolute;
+        width: 1.1rem;
+        right: 0.1rem;
+        top: 0.1rem;
+    }
+    .wrapper .question{
+        width: 9rem;
+        height: 14.25rem;
+        margin-left: 0.5rem;
+        margin-top: 0.5rem;
+        background: url("./images/questioning.png") no-repeat;
+        background-size: 100% 100%;
+    }
+    .wrapper .question .stage{
+        position: absolute;
+        left: 2rem;
+        top: 1.72678rem;
+    }
+    .wrapper .question .second{
+        position: absolute;
+        right: 1.35rem;
+        top: 1.76124rem;
+    }
+    .wrapper .question .answer{
+        position: absolute;
+        width: 7.2rem;
+        height: 5.2rem;
+        left: 1.8rem;
+        top: 2.6rem;
+    }
+    .wrapper .question .answer .q-question{
+        position: absolute;
+        top: 0.7rem;
+        left: -0.5rem;
+        text-indent: 1rem;
+        line-height: 0.4rem;
+    }
+    .wrapper .question .answer .ansA{
+        position: absolute;
+        left: 0.2rem;
+        top: 1.9rem;
+    }
+    .wrapper .question .answer .ans-a{
+        position: absolute;
+        left: 0.7rem;
+        top: 1.9rem;
+    }
+    .wrapper .question .answer .ansB{
+        position: absolute;
+        left: 0.2rem;
+        top: 2.75rem;
+    }
+    .wrapper .question .answer .ans-b{
+        position: absolute;
+        left: 0.7rem;
+        top: 2.75rem;
+    }
+    .wrapper .question .answer .ansC{
+        position: absolute;
+        left: 0.2rem;
+        top: 3.47rem;
+    }
+    .wrapper .question .answer .ans-c{
+        position: absolute;
+        left: 0.7rem;
+        top: 3.47rem;
+    }
+    .wrapper .question .answer .ansD{
+        position: absolute;
+        left: 0.2rem;
+        top: 4.22rem;
+    }
+    .wrapper .question .answer .ans-d{
+        position: absolute;
+        left: 0.7rem;
+        top: 4.22rem;
+    }
+    .wrapper .question .prompt{
+        position: absolute;
+        left: 2.2rem;
+        top: 8.6rem;
+        margin-right: 1.4rem;
+        line-height: 0.5rem;
+        font-size: 0.36rem;
+        text-indent: 0.4rem;
+    }
+    .wrapper .question .record{
+        position: absolute;
+        width: 3.21327rem;
+        top: 11rem;
+        left: 3.31rem;
+    }
+
+    .wrapper .question .record:active{
+        opacity: 0.8;
+    }
+
+    .wrapper .popPrompt{
+        display: none;
+        position: fixed;
+        left: 1.5rem;
+        top: 5rem;
+        width: 7rem;
+        height: 5rem;
+        background: url("./images/tryOops.png") no-repeat;
+        background-size: 100% 100%;
+        z-index: 11;
+    }
+    .wrapper .popPrompt .pop-left{
+        position: absolute;
+        left: 0.7rem;
+        width: 2.5rem;
+        top: 3.2rem;
+    }
+    .wrapper .popPrompt .pop-top{
+        position: absolute;
+        left: 1.8rem;
+        width: 3.5rem;
+        top: 2.2rem;
+    }
+    .wrapper .popPrompt .pop-right{
+        position: absolute;
+        right: 0.7rem;
+        width: 2.5rem;
+        top: 3.2rem;
+    }
+    .wrapper .popPrompt .pop-center{
+        position: absolute;
+        right: 1.8rem;
+        width: 3.5rem;
+        top: 3.2rem;
+    }
+    .wrapper .popPrompt .pop-close{
+        position: absolute;
+        right: -0.4rem;
+        width: 1.5rem;
+        top: -0.6rem;
+    }
+    .wrapper .pop-mask{
+        display: none;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.4;
+        z-index: 10;
+    }
+</style>
+<div class="wrapper">
+    <img src="./images/voice-icon.png" class="voice-icon">
+    <div class="question">
+        <span class="stage">初级</span>
+        <span class="second"></span>
+        <div class="answer">
+            <span class="q-number">第1题</span>
+            <span class="q-question"></span>
+            <span class="ansA">A</span>
+            <span class="ans-a ans-X"></span>
+            <span class="ansB">B</span>
+            <span class="ans-b ans-X"></span>
+            <span class="ansC">C</span>
+            <span class="ans-c ans-X"></span>
+            <span class="ansD">D</span>
+            <span class="ans-d ans-X"></span>
+            <!--<span class="ansE">E</span>-->
+            <!--<span class="ans-e ans-X"></span>-->
+        </div>
+        <span class="prompt"></span>
+        <img src="./images/record.png" class="record">
+    </div>
+
+    <div class="popPrompt">
+        <!--<img src="./images/120migubi.png" class="pop-top">-->
+        <!--<img src="./images/pop-ok.png" class="pop-left">-->
+        <!--<img src="./images/pop-getReward.png" class="pop-right">-->
+        <img src="./images/pop-ok.png" class="pop-center">
+        <!--<img src="./images/pop-close.png" class="pop-close">-->
+    </div>
+    <div class="pop-mask"></div>
+</div>
+<script>
+    $(function () {
+        var script = document.createElement('script');
+        script.src="./component/questionStem/index.js";
+        document.getElementById("container").appendChild(script);
+    });
+</script>
+
+
+
+
+
+
