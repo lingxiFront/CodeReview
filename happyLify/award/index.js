@@ -233,7 +233,7 @@
   /**
    * @desc 设置cookie
    * @arg {string} cookieName cookie的名字
-   * @agr {string} cookieValue cookie的值
+   * @arg {string} cookieValue cookie的值
    */
   function setCookie(cookieName, cookieValue) {
     var curTamp = Date.now(),
