@@ -257,7 +257,7 @@
      */
     function showTheQuestion() {
         if(!topicArray)return;
-        var array=[];//存放当前试题选项答案
+        var array=[];//存放当前试题选项内容
         topicArray = typeof topicArray=="string" ?JSON.parse(topicArray) :topicArray;
         $('.wrapper>.voice-icon').hasClass("stopTTS") || lx.startTTS({text:topicArray[orderNumber].content});
         $('.answer>.q-question').text(topicArray[orderNumber].content);
