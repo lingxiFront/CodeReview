@@ -163,11 +163,11 @@
   });
   // 用户信息校验提交
   $('.real-prize .btn2').on(e, function () {
-    var name = $('.name').val().trim();
-    var tel = $('.tel').val().trim();
-    var address = $('.address').val().trim();
-    var telReg = /^1(3|4|5|7|8)[0-9]{9}$/;
-    var isTel = telReg.test(tel);
+    var name = $('.name').val().trim(),
+        tel = $('.tel').val().trim(),
+        address = $('.address').val().trim(),
+        telReg = /^1(3|4|5|7|8)[0-9]{9}$/,
+        isTel = telReg.test(tel);
     
     if (name === '') {
       lxUtil.showToast('姓名不能为空！', 'top');
@@ -233,7 +233,7 @@
   /**
    * @desc 设置cookie
    * @arg {string} cookieName cookie的名字
-   * @arg {string} cookieValue cookie的值
+   * @agr {string} cookieValue cookie的值
    */
   function setCookie(cookieName, cookieValue) {
     var curTamp = Date.now(),
