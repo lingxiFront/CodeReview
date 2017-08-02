@@ -275,7 +275,7 @@
         };
         $('.question>.stage').text(stageHook[level] || '初级');
         $('.answer>.q-number').text('第'+ (orderNumber*1+1) +'题');
-        array.length==5 && $('.answer>.ansE').show();
+        
         clearInterval(window['timer']);
         //设置倒计时
         window['timer'] =setInterval(function () {
