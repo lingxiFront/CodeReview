@@ -61,14 +61,26 @@
             });
         }
     }
-    !sessionId || !level ? ($('.question>.prompt').text(tryPrompt),$('.wrapper>.question').css({'background':'url("./images/questioning.png") no-repeat','background-size':'100% 100%'})) :($('.question>.prompt').text(prompt),$('.wrapper>.question').css({'background':'url("./images/questioning2.png") no-repeat','background-size':'100% 100%'}));
-
+    
+if(!sessionId || !level){
+    $('.question>.prompt').text(tryPrompt)
+    $('.wrapper>.question').css({'background':'url("./images/questioning.png") no-repeat','background-size':'100% 100%'})
+}else{
+    $('.question>.prompt').text(prompt)
+    $('.wrapper>.question').css({'background':'url("./images/questioning2.png") no-repeat','background-size':'100% 100%'});
+}
     /**
      * @desc 语音播报按钮
      */
     $('.wrapper>.voice-icon').click(function () {
         lxData.trackEvent('点击语音播报按钮');
-        $(this).hasClass("stopTTS") ?($(this).attr('src','./images/voice-icon.png'),lx.startTTS({text:topicArray[orderNumber].content}),sessionStorage.setItem('voicebroadcast',1)): ($(this).attr('src','./images/voice-close-icon.png'),lx.stopTTS(),sessionStorage.setItem('voicebroadcast',2));
+       
+        if($(this).hasClass("stopTTS") ){
+            $(this).attr('src','./images/voice-icon.png'),lx.startTTS({text:topicArray[orderNumber].content}),sessionStorage.setItem('voicebroadcast',1)
+        }else{
+             $(this).attr('src','./images/voice-close-icon.png'),lx.stopTTS(),sessionStorage.setItem('voicebroadcast',2);
+        }
+        
         $(this).toggleClass('stopTTS');
     });
 
