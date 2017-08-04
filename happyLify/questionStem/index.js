@@ -264,6 +264,13 @@ if(!sessionId || !level){
     $('.popPrompt>.pop-center').click(function () {
         page.back('questionStem')
     });
+    var stageHook ={
+            '1' : '初级',
+            '2' : '中级',
+            '3' : '中高级',
+            '4' : '高级',
+        };
+        $('.question>.stage').text(stageHook[level] || '初级');
     /**
      * @desc 将得到的试题信息呈现在页面上
      */
@@ -279,13 +286,7 @@ if(!sessionId || !level){
         for(var i=0;i<array.length;i++){
             $($('.ans-X')[i]).text(array[i])
         }
-        var stageHook ={
-            '1' : '初级',
-            '2' : '中级',
-            '3' : '中高级',
-            '4' : '高级',
-        };
-        $('.question>.stage').text(stageHook[level] || '初级');
+        
         $('.answer>.q-number').text('第'+ (orderNumber*1+1) +'题');
         
         clearInterval(window['timer']);
